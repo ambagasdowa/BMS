@@ -2,4 +2,4 @@
 
 Book Management Software
 
-[Documentation]{https://ambagasdowa.github.io/BMS}
+[Documentation](https://ambagasdowa.github.io/BMS)

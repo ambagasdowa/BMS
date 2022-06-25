@@ -77,6 +77,33 @@ Roadmap to Requirements
 
 ## Propuesta Económica
 
+### Propuesta 1
+
+> tiempo de desarrollo 6 meses
+
+- Pago de equipo completo de desarrollo
+- Anticipo del 25%
+- 1er de 25%
+- 2nd del 50%:w
+
+- Total $182,000.00
+
+### Propuesta 2
+
+> tiempo de desarrollo 9 meses
+
+- Pago mensual 2 desarrolladores
+- $9,000 c/u
+- Total mensual 18,000
+
+### Propuesta 3
+
+> tiempo de desarrollo 18 meses
+
+- Pago mensual 2 desarrolladores
+- $5,055.00
+- Total mensual $10,111.00
+
 ---
 
 ## Firma de conformidad

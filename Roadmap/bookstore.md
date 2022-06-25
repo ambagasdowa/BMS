@@ -95,16 +95,16 @@ Roadmap to Requirements
 - Pago mensual 2 desarrolladores
 - $9,000 c/u
 
-[] Total mensual $18,000.00
+[ ] Total mensual $18,000.00
 
 ### Propuesta 3
 
 > tiempo de desarrollo 18 meses
 
 - Pago mensual 2 desarrolladores
-- $5,055.00
+- $6,055.00
 
-[] Total mensual $10,111.00
+[ ] Total mensual $12,110.00
 
 ---
 

@@ -1,5 +1,5 @@
 \babel@toc {spanish}{}
-\contentsline {section}{\numberline {1}\color {kblue}\sffamily {Proyecto Edi-q}}{2}{section.1}%
+\contentsline {section}{\numberline {1}\color {kblue}\sffamily {Plataforma Educativa Edi-q}}{2}{section.1}%
 \contentsline {section}{\numberline {2}\color {kblue}\sffamily {Objetivo General}}{3}{section.2}%
 \contentsline {section}{\numberline {3}\color {kblue}\sffamily {Planteamiento}}{4}{section.3}%
 \contentsline {section}{\numberline {4}\color {kblue}\sffamily {Alcances del Proyecto}}{5}{section.4}%

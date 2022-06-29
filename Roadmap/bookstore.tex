@@ -243,7 +243,7 @@ coltitle=black,center title}}
 % \renewcommand{\CoverPageBody}{\includegraphics[width=.35\textwidth]{rwthlogo}}
 % \renewcommand{\CoverPageFooter}{\includegraphics[width=.35\textwidth]{rwthlogo}}
 
-\renewcommand{\CoverPageFooterLogo}{\includegraphics[width=.50\textwidth]{img/cyberia.jpg}}
+\renewcommand{\CoverPageFooterLogo}{\includegraphics[width=.15\textwidth]{img/cyberia.jpg}}
 %-----------------------------------------------------------------------
 \begin{document}
   \AddToShipoutPicture{\BackgroundPic}
@@ -290,6 +290,25 @@ coltitle=black,center title}}
 %
 % \myequations{costo_call}
 
+
+\newpage
+\KOMAoptions{paper=portrait,pagesize}
+\begin{section}{\color{kblue}\sffamily{Proyecto Edi-q}}
+  \sffamily{
+
+
+
+
+      \begin{figure}[htb]
+        \centering
+        \includegraphics[angle=0,width=0.5\textwidth]{img/edi-q.jpg}
+	\caption{\href{https://www.ediq.mx}{\faExternalLink\ \emph{Edi-q}}}
+        \label{sel064}
+      \end{figure}
+  }
+\end{section}
+
+
 \newpage
 \KOMAoptions{paper=portrait,pagesize}
 \begin{section}{\color{kblue}\sffamily{Objetivo General}}
@@ -315,7 +334,7 @@ coltitle=black,center title}}
   \end{section}
 %      \begin{figure}[htb]
 %        \centering
-%        \includegraphics[angle=0,width=140mm,height=90mm]{img/libro.png}
+%        \includegraphics[angle=0,width=0.5\textwidth]{img/edi-q.jpg}
 %        \caption{DS}
 %        \label{sel064}
 %      \end{figure}
@@ -331,27 +350,6 @@ coltitle=black,center title}}
 
 \end{itemize}
 
-%ImG
-
-      \begin{figure}[htb]
-        \centering
-        \includegraphics[angle=0,width=140mm,height=90mm]{img/7.jpg}
-        \caption{hoja Original}
-        \label{sel064}
-      \end{figure}
-
-      \begin{figure}[htb]
-        \centering
-        \includegraphics[angle=0,width=140mm,height=90mm]{img/libro.png}
-        \caption{Prueba de concepto}
-        \label{sel064}
-      \end{figure}
-
-
-%live demo
-
-%https://baizabal.xyz/demos/
-
 
   \end{section}
 
@@ -359,21 +357,13 @@ coltitle=black,center title}}
 
 \newpage
 \KOMAoptions{paper=portrait,pagesize}
-\begin{section}{\color{kblue}\sffamily{Cronograma}}
+\begin{section}{\color{kblue}\sffamily{Alcances del Proyecto}}
   \sffamily{
 \begin{itemize}
-	\item Configuraci\'on del servidor. - 24 Horas.
-	\item Configuraci\'on Hypervisor. - 24 Horas.
-	\item Configuraciones de la seguridad del servidor. -24 Horas.
-	\item Integraci\'on de servicios de VPN. - 12 Horas.
-	\item Migraci\'on de m\'aquinas virtuales. - 24 Horas por Maquina Virtua -SIE/GST
-	\item Levantamiento de servicios de conexi\'on entre M\'aquinas Virtuales.
-	\item Prueba de configuraciones - 12 Horas. - SIE/GST
-	\item Liberaci\'on del ambiente a GST. - 5 Horas
-	\item Sincronizaci\'on de servidor local.
-	\bigskip
-	\bigskip
-	\item Se establece un periodo de 10 d\'ias h\'abiles para el alta del servicio.
+	\item Interfaz que Simulara el uso natural de un libro 
+	\item Capacidad de responder los ejercicios sobre el libro digital 
+	\item Automatizacion del proceso de evaluación de los alumnos que realicen actividades en la plataforma digital
+	\item Administración y precentación de la información procedente de los alumnos en tiempo real (Dashboard)
 	
 
 \end{itemize}
@@ -388,15 +378,55 @@ coltitle=black,center title}}
 % 	    \Discount{}{2000}
 %      \end{invoice}
 %
- }
-  \end{section}
+
+
+%ImG
+\newpage
+
+%\href[options]{URL}{text}
+
+   \href{https://baizabal.xyz/demos}{\faExternalLink\ \emph{Prueba en linea}}
+
+
       \begin{figure}[htb]
         \centering
-        \includegraphics[angle=0,width=140mm,height=90mm]{img/cronograma1.jpg}
-        \caption{Tiempos}
+        \includegraphics[angle=0,width=75mm,height=50mm]{img/libro_orig.png}
+        \caption{hoja Original}
         \label{sel064}
       \end{figure}
-  
+
+      \begin{figure}[htb]
+        \centering
+        \includegraphics[angle=0,width=65mm,height=50mm]{img/libro.png}
+	\caption{Prueba de concepto} 
+        \label{sel064}
+      \end{figure}
+
+
+%live demo
+
+%https://baizabal.xyz/demos/
+
+
+
+
+
+
+
+
+
+
+
+
+ }
+  \end{section}
+
+
+
+
+
+
+
   
 %  \begin{section}{\color{kblue}\sffamily{link}}
 %    \sffamily
@@ -412,31 +442,31 @@ coltitle=black,center title}}
 %  \end{section}
   
 
-\newpage
-\KOMAoptions{paper=portrait,pagesize}
-\begin{section}{\color{kblue}\sffamily{Consideraciones}}
-  \sffamily{
-\begin{itemize}
-        \item Al adquirir nuestros servicios se agrega una capa de cifrado a la transferencia de data, adicional a la proporcionada por los protocolos locales del servidor en la nube.
-		\item El acceso a los servidores será administrado por el área de TI de la empresa contratante (GST), teniendo a su disposición todos los recursos del servicio contratado.
-		\item La frecuencia de respaldo de datos será determinada y supervisada por el área de TI de la empresa contratante (GST).
-		\item El servicio en la nube cuenta con una amplia capacidad para soportar los diferentes sistemas base (Windows, Linux, Unix).
-		\item Se integra una p\'oliza de mantenimiento, que asegura un \'optimo aprovechamiento de los recursos contratados (se har\'a una notificaci\'on con no menos de 24 hrs. de anticipaci\'on).
-		\item Se integran 2 modelos de trabajo en base al pago: mensualidad y anualidad. El pago mensual se establece en base al primer pago. La anualidad integra un descuento por 1 mes al pagar en esta modalidad.
-		\item Con SIE olv\'idate de los cargos ocultos por tasas de transferencia, el pago definido mensual o anual no sufre modificaciones.
-		\item La p\'oliza de mantenimiento incluye apoyo t\'ecnico con los servicios instalados en el servdidor.
-		\item Para finalizar la relación comercial, se debe realizar la notificaci\'on 30 d\'ias antes, dentro de un periodo de p\'oliza vigente.
-\end{itemize}
-
- }
-  \end{section}
-      \begin{figure}[htb]
-        \centering
-        \includegraphics[angle=0,width=90mm,height=45mm]{img/iOT.jpg}
-        \caption{Tiempos}
-        \label{sel064}
-      \end{figure}
-
+%\newpage
+%\KOMAoptions{paper=portrait,pagesize}
+%\begin{section}{\color{kblue}\sffamily{Consideraciones}}
+%  \sffamily{
+%\begin{itemize}
+%        \item Al adquirir nuestros servicios se agrega una capa de cifrado a la transferencia de data, adicional a la proporcionada por los protocolos locales del servidor en la nube.
+%		\item El acceso a los servidores será administrado por el área de TI de la empresa contratante (GST), teniendo a su disposición todos los recursos del servicio contratado.
+%		\item La frecuencia de respaldo de datos será determinada y supervisada por el área de TI de la empresa contratante (GST).
+%		\item El servicio en la nube cuenta con una amplia capacidad para soportar los diferentes sistemas base (Windows, Linux, Unix).
+%		\item Se integra una p\'oliza de mantenimiento, que asegura un \'optimo aprovechamiento de los recursos contratados (se har\'a una notificaci\'on con no menos de 24 hrs. de anticipaci\'on).
+%		\item Se integran 2 modelos de trabajo en base al pago: mensualidad y anualidad. El pago mensual se establece en base al primer pago. La anualidad integra un descuento por 1 mes al pagar en esta modalidad.
+%		\item Con SIE olv\'idate de los cargos ocultos por tasas de transferencia, el pago definido mensual o anual no sufre modificaciones.
+%		\item La p\'oliza de mantenimiento incluye apoyo t\'ecnico con los servicios instalados en el servdidor.
+%		\item Para finalizar la relación comercial, se debe realizar la notificaci\'on 30 d\'ias antes, dentro de un periodo de p\'oliza vigente.
+%\end{itemize}
+%
+% }
+%  \end{section}
+%      \begin{figure}[htb]
+%        \centering
+%        \includegraphics[angle=0,width=90mm,height=45mm]{img/iOT.jpg}
+%        \caption{Tiempos}
+%        \label{sel064}
+%      \end{figure}
+%
 
 \newpage
 \KOMAoptions{paper=portrait,pagesize} % shiwcth to lanscape
@@ -446,42 +476,77 @@ coltitle=black,center title}}
     {
 
 
-%\begin{table}[h!]
-%  \begin{center}
-%    \caption{Propuesta Economica}
-%    \label{tab:table1}
-%    \begin{tabular}{c|l|l|l|c|r}
-%      \textbf{SKU} & \textbf{Cant} & \textbf{Descripci\'on} & \textbf{SubTotal} & \textbf{Iva} & \textbf{Total} \\ % <-- added & and content for each column
-%      \hline
-%      SV8-00009 & 1 & Servidor Dedicado & $78,500 & $12,560 & $91,060 \\ % <--
-%      841111506 & Poly & TBO7911166Z6 & Proceso de Validacion y Resguardo de Facturas Feb-Ago 2020  & 1,300 & 2 \\ % <--
-%      43222634  & Hugo & TBO7911166Z6 & Dispositivo de Monitoreo o manejo de redes & 1 & 38,500 \\ % <--
-%      81111600  & Hugo & TLO970502AA4 & Implementacion y desarrollo de software & 1 & 50,166.67 \\ % <--
-%    \end{tabular}
-%  \end{center}
-%\end{table}
 
-\begin{tcolorbox}[tab2,tabularx={c||c||l||l||l||c||r},title=Propuesta Economica,boxrule=0.5pt,colframe=cyan!50!black,colbacktitle=kblues,coltitle=white,colback=white,colupper=ktext]
-\textbf {PLAN} &\textbf {SKU} & \textbf {Cant}     & \textbf {Descripci\'on}     & \textbf SubTotal  & \textbf{Iva} & \textbf{Total}       \\\hline\hline
-Mensual& SV8-00009& 1 & Servidor Dedicado & \$78,500 & \$12,560 & \$91,060 \\\hline\hline % <--  \\\hline\hline
-Anual& SV8-00009& 1 & Servidor Dedicado & \$863,500 & \$138,160 & \$1,001,660 \\ % <--  \\\hline\hline
+
+\begin{tcolorbox}[
+		  tab2,
+		  tabularx={l||c||r},
+		  title=Propuesta Economica,
+		  boxrule=0.5pt,
+		  colframe=cyan!50!black,
+		  colbacktitle=kblues,
+		  coltitle=white,
+		  colback=white,
+		  colupper=ktext
+		]
+  \textbf {Propuesta 1}		  & \textbf{Descripción}  & \textbf{Total}	\\\hline\hline
+  Tiempo de Desarrollo		  & 6 meses		  &			\\\hline\hline % <--  \\\hline\hline
+  Anticipo del 50\%		  &			  &			\\\hline\hline % <--  \\\hline\hline
+  Primer Pago del 25\%		  &			  &			\\\hline\hline % <--  \\\hline\hline
+  Segundo y último Pago del 25\%  &			  &			\\\hline\hline % <--  \\\hline\hline
+				  &			  & \$182,000.\textsuperscript{00}      	\\\hline\hline % <--  \\\hline\hline
+
+
+\end{tcolorbox}
+
+
+\begin{tcolorbox}[
+		  tab2,
+		  tabularx={l||c||r},
+		  title=Propuesta Economica,
+		  boxrule=0.5pt,
+		  colframe=cyan!50!black,
+		  colbacktitle=kblues,
+		  coltitle=white,
+		  colback=white,
+		  colupper=ktext
+		]
+  \textbf {Propuesta 2}		  & \textbf{Descripción}  & \textbf{Total}	\\\hline\hline
+  Tiempo de Desarrollo		  & 9 meses		  &			\\\hline\hline 
+  Equipo de Desarrolladores\%     & 2 desarrolladores	  &			\\\hline\hline 
+  Pago Mensual 		          & \$9,000.\textsuperscript{00} & \$18,000.\textsuperscript{00} \\\hline\hline 
+				  &			  & \$162,000.\textsuperscript{00}  \\\hline\hline
+
 
 \end{tcolorbox}
 
 
 
- \begin{itemize}
-	\item \textbf {Pago mensual:} SIN CONTRATO FORZOSO  (la cancelación se debe realizar la notificaci\'on 30 d\'ias antes, dentro de un periodo de p\'oliza vigente.)
-	\item \textbf {Pago anual:} SIN CONTRATO FORZOSO  (se debe realizar la notificaci\'on 30 d\'ias antes, dentro de un periodo de p\'oliza vigente.)
-	\item \textbf {Para cualquiera de las p\'olizas se requiere un anticipo del 50\%\ y al finalizar la instalaci\'on se cubrir\'a el 50\%\ restante}
-	\item \textbf {Tráfico ilimitado:} sin costos adicionales debido al tráfico, puede usar 100 Mbit/s sin restricciones de ancho de banda. (Solo en caso de que su servidor tenga un enlace ascendente de 1 o 10 Gbit/s: si el consumo de tráfico promedio excede continuamente los 100 Mbit/s durante un período de tiempo de al menos 10 días, mientras que el tráfico entre las 2:00 y las 11:00 UTC no se tiene en cuenta, puede ser cualquier valor (la conexión se cambia a 100 Mbit/s).
-	\item \textbf {Soporte para conexiones VPN (SIE o terceros).}
-	\item \textbf {Alta Disponibilidad 99.99\%\.}
-	\item \textbf {Análisis, migración de M\'aquinas Virtuales existentes, configuración y soporte.}
-	\item \textbf {Beneficios adicionales:} Siempre se incluye una dirección IP estática, la administración de DNS, el monitoreo y la alerta de recursos, el acceso remoto mediante SSH o RDP y la administración de clave segura.
-	\item \textbf {Sin cargos extras:} Los precios mostrados en este documento se respetar\'an durante 12 Meses.
-	\item  P\'oliza de Mantenimiento incluida el primer año y \$15,000 el segundo año.
-\end{itemize}
+
+\begin{tcolorbox}[
+		  tab2,
+		  tabularx={l||c||r},
+		  title=Propuesta Economica,
+		  boxrule=0.5pt,
+		  colframe=cyan!50!black,
+		  colbacktitle=kblues,
+		  coltitle=white,
+		  colback=white,
+		  colupper=ktext
+		]
+  \textbf {Propuesta 3}		  & \textbf{Descripción}  & \textbf{Total}	\\\hline\hline
+  Tiempo de Desarrollo		  & 18 meses		  &			\\\hline\hline 
+  Equipo de Desarrolladores\%     & 2 desarrolladores	  &			\\\hline\hline 
+  Pago Mensual 		          & \$6,055.\textsuperscript{00} & \$12,110.\textsuperscript{00} \\\hline\hline 
+				  &			  & \$272,980.\textsuperscript{00}  \\\hline\hline
+
+
+\end{tcolorbox}
+
+%
+% \begin{itemize}
+%	\item \textbf {Pago mensual:} SIN CONTRATO FORZOSO  (la cancelación se debe realizar la notificaci\'on 30 d\'ias antes, dentro de un periodo de p\'oliza vigente.)
+%\end{itemize}
 
     }
   \end{section}
@@ -493,15 +558,18 @@ Anual& SV8-00009& 1 & Servidor Dedicado & \$863,500 & \$138,160 & \$1,001,660 \\
 \begin{itemize}
 \bigskip
 \bigskip
-    \item Plan\:\ \ \ \ \ \underline {MENSUAL}\ \ \ \ \ \ \ \ \underline{ANUAL}
+    \item Propuesta\:\ \ \ \ \ \underline {}\ \ \ \ \ \ \ \ \underline{}
 \bigskip
 \bigskip
-    \item Nombre\:\ Lic. Javier Garcia Vargas
+    \item Nombre\:\ Quimico. ? 
 	\medskip
 	\item Firma\: \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ 
 \bigskip
+    \item Nombre\:\ Ing. Carlos 
+	\medskip
+	\item Firma\: \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ 
 \bigskip
-	\item Nombre\:\ Ing. Guillermo Garcia Samano
+	\item Nombre\:\ Ing. Jesús A. Mendoza Baizabal
     \medskip
 	\item Firma\: \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
 \end{itemize}

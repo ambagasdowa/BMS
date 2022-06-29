@@ -1,0 +1,7 @@
+\babel@toc {spanish}{}
+\contentsline {section}{\numberline {1}\color {kblue}\sffamily {Objetivo General}}{2}{section.1}%
+\contentsline {section}{\numberline {2}\color {kblue}\sffamily {Planteamiento}}{3}{section.2}%
+\contentsline {section}{\numberline {3}\color {kblue}\sffamily {Cronograma}}{4}{section.3}%
+\contentsline {section}{\numberline {4}\color {kblue}\sffamily {Consideraciones}}{6}{section.4}%
+\contentsline {section}{\numberline {5}\color {kblue}\sffamily {Propuesta Económica}}{7}{section.5}%
+\contentsline {section}{\numberline {6}\color {kblue}\sffamily {Firma de conformidad}}{9}{section.6}%

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title></title>
+    <style type="text/css" media="screen">
+      body {
+        background: teal;
+      }
+
+      #layer1,
+      #layer2 {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 1024px;
+        height: 780px;
+      }
+
+      #layer1 {
+        z-index: 1;
+        /*     background: linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.5)),*/
+        background: url("https://ediq.mx/public/guias/guia_demo_uv_040321_2/pages/7.jpg");
+      }
+
+      #layer2 {
+        z-index: 1;
+        opacity: 0.5;
+      }
+
+      .transparentLayer {
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)"; /* IE8 */
+        filter: alpha(opacity=50); /*  IE7 or older */
+        opacity: 0.3; /* all real browsers */
+      }
+
+      /* .formInput{
+      width:50%;or X%
+      ::placeholder{
+          padding-left: 100% !important;
+      }
+      padding-left: 120% !important;
+      margin-top: 250%;
+      background-color: white;
+       border: 1px solid rgb(145, 145, 145);
+       border-radius: 10px ;
+      color: #78C800;
+      align-self: flex-start;here
+  } */
+
+      #container {
+        box-sizing: border-box;
+        border: 1px solid blue;
+        width: 100%;
+        height: 100%;
+        float: left;
+      }
+
+      .triangle {
+        position: relative;
+        text-align: center;
+        width: 1024px;
+        height: 780px;
+        margin: auto;
+        border: 2px solid green;
+      }
+
+      #a {
+        position: absolute;
+        top: 74%;
+        left: 190px;
+        width: 3%;
+      }
+
+      #b {
+        position: absolute;
+        bottom: 23.5%;
+        right: 66.2%;
+        width: 3%;
+      }
+
+      #c {
+        position: absolute;
+        top: 74%;
+        left: 43%;
+        width: 3%;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="layer1"></div>
+    <div id="layer2" class="transparentLayer">
+      <div id="container">
+        <h2>Triangle rectangle</h2>
+        <div class="triangle">
+          <form autocomplete="off">
+            <input type="text" name="a" id="a" placeholder="a" />
+            <input type="text" name="b" id="b" autofocus="on" placeholder="b" />
+            <input type="text" name="c" id="c" autofocus="on" placeholder="c" />
+          </form>
+          <canvas id="myCanvas" width="1024" height="780"
+            >Your browser does not support the HTML5 canvas tag.</canvas
+          >
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

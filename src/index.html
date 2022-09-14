@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BMS</title>
+
+    <script type="text/javascript" src="./js/jquery-1.7.1.min.js"></script>
+    <script type="text/javascript" src="./js/turn.js"></script>
+
+    <script type="text/css" src="/css/layers.css"></script>
+    <script type="text/css" src="./css/positions.css"></script>
+    <script type="text/css" src="./css/layouts.css"></script>
+
+    <style type="text/css">
+      body {
+        background: #000;
+      }
+      #magazine {
+        width: 1024px;
+        height: 780px;
+      }
+      #magazine .turn-page {
+        background-color: #ccc;
+        background-size: 100% 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <p>Testing Book Manager System</p>
+
+    <div id="layer1"></div>
+    <div id="layer2" class="transparentLayer">
+      <div id="container">
+        <h2>Triangle rectangle</h2>
+        <div class="triangle">
+          <form autocomplete="off">
+            <input type="text" name="a" id="a" placeholder="a" />
+            <input type="text" name="b" id="b" autofocus="on" placeholder="b" />
+            <input type="text" name="c" id="c" autofocus="on" placeholder="c" />
+          </form>
+          <canvas id="myCanvas" width="1024" height="780"
+            >Your browser does not support the HTML5 canvas tag.</canvas
+          >
+        </div>
+      </div>
+    </div>
+
+    <div id="magazine">
+      <div
+        style="background-image: url(book-source/guia/unam/001/pages/14.jpg)"
+      ></div>
+      <!--
+      <div
+        style="background-image: url(book-source/guia/unam/001/pages/15.jpg)"
+      ></div>
+      <div
+        style="background-image: url(book-source/guia/unam/001/pages/147.jpg)"
+      ></div>
+      <div
+        style="background-image: url(book-source/guia/unam/001/pages/35.jpg)"
+      ></div>
+      <div
+        style="background-image: url(book-source/guia/unam/001/pages/36.jpg)"
+      ></div>
+      <div
+        style="background-image: url(book-source/guia/unam/001/pages/43.jpg)"
+      ></div>
+      <div
+        style="background-image: url(book-source/guia/unam/001/pages/44.jpg)"
+      ></div>
+      <div
+        style="background-image: url(book-source/guia/unam/001/pages/108.jpg)"
+      ></div>
+      <div
+        style="background-image: url(book-source/guia/unam/001/pages/110.jpg)"
+      ></div>
+-->
+    </div>
+
+    <script type="text/javascript">
+      $(window).ready(function () {
+        $("#magazine").turn({
+          display: "double",
+          acceleration: true,
+          gradients: !$.isTouch,
+          elevation: 50,
+          when: {
+            turned: function (e, page) {
+              /*console.log('Current view: ', $(this).turn('view'));*/
+            },
+          },
+        });
+      });
+
+      $(window).bind("keydown", function (e) {
+        if (e.keyCode == 37) $("#magazine").turn("previous");
+        else if (e.keyCode == 39) $("#magazine").turn("next");
+      });
+    </script>
+  </body>
+</html>

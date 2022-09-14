@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Swiper demo</title>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"
+    />
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="./css/swipe/swiper-bundle.min.css" />
+    <script type="text/css" src="/css/layers.css"></script>
+    <script type="text/css" src="./css/positions.css"></script>
+    <script type="text/css" src="./css/layouts.css"></script>
+
+    <!-- Demo styles -->
+    <style>
+      /*
+      html,
+      body {
+        position: relative;
+        height: 100%;
+      }
+*/
+      body {
+        background: #eee;
+        font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+        font-size: 14px;
+        color: #000;
+        margin: 0;
+        padding: 0;
+      }
+
+      .swiper {
+        width: 100%;
+        height: 100%;
+      }
+
+      .swiper-slide {
+        background-position: center;
+        background-size: cover;
+      }
+
+      .swiper-slide img {
+        display: block;
+        width: 100%;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Swiper -->
+    <div id="layer1">
+      <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img src="./book-source/guia/unam/001/pages/35.jpg" />
+          </div>
+          <div class="swiper-slide">
+            <img src="./book-source/guia/unam/001/pages/14.jpg" />
+          </div>
+          <div class="swiper-slide">
+            <img src="./book-source/guia/unam/001/pages/15.jpg" />
+          </div>
+          <div class="swiper-slide">
+            <img src="./book-source/guia/unam/001/pages/147.jpg" />
+          </div>
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-pagination"></div>
+      </div>
+    </div>
+    <!-- lalyer 1 -->
+
+    <div id="layer2" class="transparentLayer">
+      <div id="container">
+        <h2>Triangle rectangle</h2>
+        <div class="triangle">
+          <form autocomplete="off">
+            <input type="text" name="a" id="a" placeholder="a" />
+            <input type="text" name="b" id="b" autofocus="on" placeholder="b" />
+            <input type="text" name="c" id="c" autofocus="on" placeholder="c" />
+          </form>
+          <canvas id="myCanvas" width="1024" height="780"
+            >Your browser does not support the HTML5 canvas tag.</canvas
+          >
+        </div>
+      </div>
+    </div>
+
+    <!-- Swiper JS -->
+    <script src="./js/swipe/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        spaceBetween: 30,
+        effect: "fade",
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+        keyboard: {
+          enabled: true,
+        },
+        pagination: {
+          el: ".swiper-pagination",
+          //          type: "fraction",
+          //          clickable: true,
+          type: "progressbar",
+        },
+      });
+    </script>
+  </body>
+</html>

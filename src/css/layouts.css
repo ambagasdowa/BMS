@@ -1,0 +1,36 @@
+body {
+  background: black !important;
+}
+
+#layer1,
+#layer2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1275px;
+  height: 1650px;
+  /*  width: 1024px;
+  height: 780px;*/
+}
+
+#layer1 {
+  z-index: 1;
+  /* background-color: white; */
+  /*     background: linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.5)),
+    url('https://ediq.mx/public/guias/guia_demo_uv_040321_2/pages/5.jpg'); */
+  /*  background: url("https://ediq.mx/public/guias/guia_demo_uv_040321_2/pages/1.jpg");*/
+  /*Remove for production*/
+  opacity: 0.3;
+}
+
+#layer2 {
+  z-index: 1;
+  /* background-color: white; */
+  opacity: 0.5;
+}
+
+.transparentLayer {
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)"; /* IE8 */
+  filter: alpha(opacity=50); /*  IE7 or older */
+  opacity: 0.3; /* all real browsers */
+}

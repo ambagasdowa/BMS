@@ -1,0 +1,16 @@
+#container {
+  box-sizing: border-box;
+  border: 1px solid blue;
+  width: 100%;
+  height: 100%;
+  float: left;
+}
+
+.controls {
+  position: relative;
+  text-align: center;
+  width: 1110px;
+  height: 950px;
+  margin: auto;
+  border: 2px solid green;
+}

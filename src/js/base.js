@@ -14,14 +14,6 @@ layers.setAttribute("href", "./css/layers.css");
 /* attach to the document head */
 document.getElementsByTagName("head")[0].appendChild(layers);
 
-///* create the link element */
-//const positions = document.createElement("link");
-///* add attributes */
-//positions.setAttribute("rel", "stylesheet");
-//positions.setAttribute("href", "./css/positions.css");
-///* attach to the document head */
-//document.getElementsByTagName("head")[0].appendChild(positions);
-
 // TODO build the provisional slider mechanism
 import * as slideModule from "./lib.js";
 //import message from "./lib.js";

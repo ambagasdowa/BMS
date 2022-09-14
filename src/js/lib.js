@@ -6,7 +6,8 @@ function greet(name) {
 export { greet, message };
 
 function slide_to_page(page) {
-  let cssRules = "#layer1{background: url(" + page + ")!important;";
+  let cssRules =
+    "#layer1{background: url(" + page + ") no-repeat;background-size:91%;}";
   /* create the style element */
   let styleElement = document.createElement("style");
   /* add style rules to the style element */
@@ -31,33 +32,11 @@ function formsMaps(css_idx) {
 function insert_inputs(idx_input) {
   // TODO : Working whit this
   const in_puts = document.querySelector(".controls form");
-  // let p_prime = in_puts.cloneNode(true);
-  //  1: [
-  //    {
-  //      type: "text",
-  //      name: "a",
-  //      id: "a",
-  //      autofocus: "on",
-  //      placeholder: "a",
-  //      class: "someclassa",
-  //    },
-  //    { type: "text", name: "b", id: "b", placeholder: "b" },
-  //    { type: "text", name: "c", id: "c", placeholder: "c" },
-  //  ]
-
   in_puts.innerHTML = "";
   let new_binputs = document.getElementById("book_canvas");
-  //  let idx_input = 1;
   console.log(new_binputs);
   console.log(`inputsLength => ${Object.keys(book_inputs[idx_input]).length}`);
-  let inputsLength = Object.keys(book_inputs[idx_input]).length;
 
-  //  const superPowers = hero.powers;
-  //  for (const power of superPowers) {
-  //    const listItem = document.createElement("li");
-  //    listItem.textContent = power;
-  //    myList.appendChild(listItem);
-  //  }
   const inputs = book_inputs[idx_input];
   for (const input of inputs) {
     console.log(input);
@@ -72,8 +51,6 @@ function insert_inputs(idx_input) {
     }
     new_binputs.appendChild(inputx);
   }
-  //  input.type = "text";
-  //  input.name = "member";
 }
 
 //===========================================================================//
@@ -81,11 +58,34 @@ function insert_inputs(idx_input) {
 // NOTE : the slider , Carousel Mechanism
 //===========================================================================//
 let currentIndex = 1;
+// TODO : response from server book logic
+// NOTE : this must be a response query
+// Insert a block of rules into a page with javascript
+// This method creates a style element, inserts our CSS rules as a string, then attaches the element to the HTML head.
+const bookpages = {
+  1: "https://ediq.mx/public/guias/guia_demo_uv_040321_2/pages/1.jpg",
+  2: "./book-source/guia/unam/001/pages/14.jpg",
+  3: "./book-source/guia/unam/001/pages/15.jpg",
+  4: "./book-source/guia/unam/001/pages/147.jpg",
+  5: "./book-source/guia/unam/001/pages/35.jpg",
+  6: "./book-source/guia/unam/001/pages/36.jpg",
+  7: "https://ediq.mx/public/guias/guia_demo_uv_040321_2/pages/7.jpg",
+  8: "./book-source/guia/unam/001/pages/180.jpg",
+};
 
 // TODO : Positions section
 const localizations = {
   1: "#a{position:absolute;top:80.2%;left:190px;width:3%;}#b{position:absolute;bottom:17.5%;right:66.5%;width:3%;}#c{position:absolute;top:80.2%;left:43%;width:3%;}",
-  2: "#a{position:absolute;top:40.2%;left:190px;width:3%;}#b{position:absolute;bottom:17.5%;right:66.5%;width:3%;}#c{position:absolute;top:80.2%;left:43%;width:3%;}",
+  2: "#a2{position:absolute;top:53.2%;left:12.8%;width:67%;background-color:#fefaca;border:none;color:teal;} \
+      #b2{position:absolute;top:54.7%;left:18.5%;width:61.3%;background-color:#fefaca;border:none;color:teal;} \
+      #cx{position:absolute;top:56.2%;left:18.6%;width:61.2%;background-color:#fefaca;border:none;color:teal;} \
+      #d2{position:absolute;top:68.3%;left:12.8%;width:67%;background-color:#fefaca;border:none;color:teal;} \
+      #e2{position:absolute;top:69.8%;left:18.5%;width:61.3%;background-color:#fefaca;border:none;color:teal;} \
+      #f2{position:absolute;top:71.2%;left:18.6%;width:61.2%;background-color:#fefaca;border:none;color:teal;} \
+      #g2{position:absolute;top:87.5%;left:12.8%;width:67%;background-color:#fefaca;border:none;color:teal;} \
+      #h2{position:absolute;top:89%;left:18.5%;width:61.3%;background-color:#fefaca;border:none;color:teal;} \
+      #i2{position:absolute;top:90.6%;left:18.6%;width:61.2%;background-color:#fefaca;border:none;color:teal;} \
+     ",
   3: "#a{position:absolute;top:50.2%;left:190px;width:3%;}#b{position:absolute;bottom:17.5%;right:66.5%;width:3%;}#c{position:absolute;top:80.2%;left:43%;width:3%;}",
   4: "#a{position:absolute;top:20.2%;left:190px;width:3%;}#b{position:absolute;bottom:17.5%;right:66.5%;width:3%;}#c{position:absolute;top:80.2%;left:43%;width:3%;}",
   5: "#a{position:absolute;top:70.2%;left:190px;width:3%;}#b{position:absolute;bottom:17.5%;right:66.5%;width:3%;}#c{position:absolute;top:80.2%;left:43%;width:3%;}",
@@ -104,8 +104,8 @@ const book_inputs = {
       placeholder: "a1",
       class: "someclass-a",
     },
-    { type: "text", name: "b-input", id: "b-input", placeholder: "b1" },
-    { type: "text", name: "cxxx", id: "cxaxa", placeholder: "c1" },
+    { type: "text", name: "b-input", id: "b2", placeholder: "b1" },
+    { type: "text", name: "cxxx", id: "cxbx", placeholder: "c1" },
   ],
   2: [
     {
@@ -113,11 +113,69 @@ const book_inputs = {
       name: "a2",
       id: "a2",
       autofocus: "on",
-      placeholder: "a2",
+      placeholder: "Responder Actividad 3 Pregunta 1",
       class: "someclassb222",
+      value: "Some Correct Previous Answer not editable",
+      disabled: "disabled",
+      style: "color:magenta!important;",
     },
-    { type: "text", name: "b222", id: "b2", placeholder: "b2222" },
-    { type: "text", name: "c222", id: "c222", placeholder: "c2222" },
+    {
+      type: "text",
+      name: "b222",
+      id: "b2",
+      placeholder: "Responder Actividad 3  Pregunta 2",
+      class: "class",
+      value: "Previous Answer and editable",
+    },
+    {
+      type: "text",
+      name: "c222",
+      id: "cx",
+      placeholder: "Responder Actividad 3 Pregunta 3",
+    },
+    {
+      type: "text",
+      name: "a2",
+      id: "d2",
+      autofocus: "on",
+      placeholder: "Responder Actividad 3 Pregunta 4",
+      class: "someclassb222",
+      value: "Some Correct Previous Answer not editable",
+      disabled: "disabled",
+      style: "color:magenta!important;",
+    },
+    {
+      type: "text",
+      name: "b222",
+      id: "e2",
+      placeholder: "Responder Actividad 3 Pregunta 5",
+      class: "class",
+      value: "Previous Answer and editable",
+    },
+    {
+      type: "text",
+      name: "c222",
+      id: "f2",
+      placeholder: "Responder Actividad 3 Pregunta 6",
+    },
+    {
+      type: "text",
+      name: "c222",
+      id: "g2",
+      placeholder: "Responder Actividad 3 Pregunta 7",
+    },
+    {
+      type: "text",
+      name: "c222",
+      id: "h2",
+      placeholder: "Responder Actividad 3 Pregunta 8",
+    },
+    {
+      type: "text",
+      name: "c222",
+      id: "i2",
+      placeholder: "Responder Actividad 3 Pregunta 9",
+    },
   ],
   3: [
     {
@@ -191,21 +249,6 @@ const book_inputs = {
     { type: "text", name: "b", id: "b", placeholder: "b8" },
     { type: "text", name: "c", id: "c", placeholder: "c888" },
   ],
-};
-
-// TODO : response from server book logic
-// NOTE : this must be a response query
-// Insert a block of rules into a page with javascript
-// This method creates a style element, inserts our CSS rules as a string, then attaches the element to the HTML head.
-const bookpages = {
-  1: "https://ediq.mx/public/guias/guia_demo_uv_040321_2/pages/1.jpg",
-  2: "https://ediq.mx/public/guias/guia_demo_uv_040321_2/pages/2.jpg",
-  3: "https://ediq.mx/public/guias/guia_demo_uv_040321_2/pages/3.jpg",
-  4: "https://ediq.mx/public/guias/guia_demo_uv_040321_2/pages/4.jpg",
-  5: "https://ediq.mx/public/guias/guia_demo_uv_040321_2/pages/5.jpg",
-  6: "https://ediq.mx/public/guias/guia_demo_uv_040321_2/pages/6.jpg",
-  7: "https://ediq.mx/public/guias/guia_demo_uv_040321_2/pages/7.jpg",
-  8: "https://ediq.mx/public/guias/guia_demo_uv_040321_2/pages/7.jpg",
 };
 
 function setSlides(num) {

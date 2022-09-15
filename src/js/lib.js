@@ -20,7 +20,7 @@ export { slide_to_page };
 
 function formsMaps(css_idx) {
   console.log("Maps => " + css_idx);
-  let cssMaps = localizations[css_idx];
+  let cssMaps = book_pages_maps[css_idx];
   /* create the style element */
   let styleMapsElement = document.createElement("style");
   /* add style rules to the style element */
@@ -62,7 +62,18 @@ let currentIndex = 1;
 // NOTE : this must be a response query
 // Insert a block of rules into a page with javascript
 // This method creates a style element, inserts our CSS rules as a string, then attaches the element to the HTML head.
-const bookpages = {
+// And this come from external json source response
+//	json_response = {
+//										book_id:
+//														[
+//															{book_pages},
+//															{book_inputs},
+//															{book_pages_maps}
+//														]
+//									}
+
+// NOTE book_pages
+const book_pages = {
   1: "https://ediq.mx/public/guias/guia_demo_uv_040321_2/pages/1.jpg",
   2: "./book-source/guia/unam/001/pages/14.jpg",
   3: "./book-source/guia/unam/001/pages/15.jpg",
@@ -74,8 +85,9 @@ const bookpages = {
 };
 
 // TODO : Positions section
-const localizations = {
-  1: "#a{position:absolute;top:80.2%;left:190px;width:3%;}#b{position:absolute;bottom:17.5%;right:66.5%;width:3%;}#c{position:absolute;top:80.2%;left:43%;width:3%;}",
+// NOTE book_pages_maps
+const book_pages_maps = {
+  1: "",
   2: "#a2{position:absolute;top:53.2%;left:12.8%;width:67%;background-color:#fefaca;border:none;color:teal;} \
       #b2{position:absolute;top:54.7%;left:18.5%;width:61.3%;background-color:#fefaca;border:none;color:teal;} \
       #cx{position:absolute;top:56.2%;left:18.6%;width:61.2%;background-color:#fefaca;border:none;color:teal;} \
@@ -86,27 +98,26 @@ const localizations = {
       #h2{position:absolute;top:89%;left:18.5%;width:61.3%;background-color:#fefaca;border:none;color:teal;} \
       #i2{position:absolute;top:90.6%;left:18.6%;width:61.2%;background-color:#fefaca;border:none;color:teal;} \
      ",
-  3: "#a{position:absolute;top:50.2%;left:190px;width:3%;}#b{position:absolute;bottom:17.5%;right:66.5%;width:3%;}#c{position:absolute;top:80.2%;left:43%;width:3%;}",
-  4: "#a{position:absolute;top:20.2%;left:190px;width:3%;}#b{position:absolute;bottom:17.5%;right:66.5%;width:3%;}#c{position:absolute;top:80.2%;left:43%;width:3%;}",
+  3: " \
+			#a{position:absolute;top:36%;left:45.3%;width:3%;} \
+      #b{position:absolute;top:37.5%;left:45.3%;width:3%;} \
+      #c{position:absolute;top:38.9%;left:45.3%;width:3%;} \
+      #d{position:absolute;top:40.4%;left:45.3%;width:3%;} \
+			#a2{position:absolute;top:44.9%;left:45.3%;width:3%;} \
+      #b2{position:absolute;top:46.3%;left:45.3%;width:3%;} \
+      #c2{position:absolute;top:47.8%;left:45.3%;width:3%;} \
+      #d2{position:absolute;top:49.2%;left:45.3%;width:3%;} \
+     ",
+  4: "",
   5: "#a{position:absolute;top:70.2%;left:190px;width:3%;}#b{position:absolute;bottom:17.5%;right:66.5%;width:3%;}#c{position:absolute;top:80.2%;left:43%;width:3%;}",
   6: "#a{position:absolute;top:60.2%;left:190px;width:3%;}#b{position:absolute;bottom:17.5%;right:66.5%;width:3%;}#c{position:absolute;top:80.2%;left:43%;width:3%;}",
   7: "#a{position:absolute;top:90.2%;left:190px;width:3%;}#b{position:absolute;bottom:17.5%;right:66.5%;width:3%;}#c{position:absolute;top:80.2%;left:43%;width:3%;}",
   8: "#a{position:absolute;top:90.2%;left:190px;width:3%;}#b{position:absolute;bottom:17.5%;right:66.5%;width:3%;}#c{position:absolute;top:80.2%;left:43%;width:3%;}",
 };
 
+// NOTE book_inputs
 const book_inputs = {
-  1: [
-    {
-      type: "text",
-      name: "a-input",
-      id: "a-input",
-      autofocus: "on",
-      placeholder: "a1",
-      class: "someclass-a",
-    },
-    { type: "text", name: "b-input", id: "b2", placeholder: "b1" },
-    { type: "text", name: "cxxx", id: "cxbx", placeholder: "c1" },
-  ],
+  1: [],
   2: [
     {
       type: "text",
@@ -179,28 +190,76 @@ const book_inputs = {
   ],
   3: [
     {
-      type: "text",
-      name: "a",
+      type: "radio",
+      name: "actividad-one",
       id: "a",
       autofocus: "on",
       placeholder: "a3333",
-      class: "someclassc",
+      class: "option-input radio",
+      value: "a",
+      onclick: "onlyOne(this,'actividad-one')",
     },
-    { type: "text", name: "b", id: "b", placeholder: "b3333" },
-    { type: "text", name: "c", id: "c", placeholder: "c3333" },
-  ],
-  4: [
     {
-      type: "text",
-      name: "a",
-      id: "a",
-      autofocus: "on",
-      placeholder: "a4444",
-      class: "someclassd",
+      type: "radio",
+      name: "actividad-one",
+      id: "b",
+      value: "b",
+      class: "option-input radio",
+      onclick: "onlyOne(this,'actividad-one')",
     },
-    { type: "text", name: "b", id: "b", placeholder: "b4444" },
-    { type: "text", name: "c", id: "c", placeholder: "c4444" },
+    {
+      type: "radio",
+      name: "actividad-one",
+      id: "c",
+      value: "c",
+      class: "option-input radio",
+      onclick: "onlyOne(this,'actividad-one')",
+    },
+    {
+      type: "radio",
+      name: "actividad-one",
+      id: "d",
+      value: "d",
+      class: "option-input radio",
+      onclick: "onlyOne(this,'actividad-one')",
+    },
+
+    {
+      type: "radio",
+      name: "actividad-two",
+      id: "a2",
+      autofocus: "on",
+      placeholder: "a3333",
+      class: "option-input radio",
+      value: "a",
+      onclick: "onlyOne(this,'actividad-two')",
+    },
+    {
+      type: "radio",
+      name: "actividad-two",
+      id: "b2",
+      value: "b",
+      class: "option-input radio",
+      onclick: "onlyOne(this,'actividad-two')",
+    },
+    {
+      type: "radio",
+      name: "actividad-two",
+      id: "c2",
+      value: "c",
+      class: "option-input radio",
+      onclick: "onlyOne(this,'actividad-two')",
+    },
+    {
+      type: "radio",
+      name: "actividad-two",
+      id: "d2",
+      value: "d",
+      class: "option-input radio",
+      onclick: "onlyOne(this,'actividad-two')",
+    },
   ],
+  4: [],
   5: [
     {
       type: "text",
@@ -257,7 +316,7 @@ function setSlides(num) {
 
 function displaySlides(num) {
   var x;
-  const slides = { length: Object.keys(bookpages).length }; // emulates the query inside DOM
+  const slides = { length: Object.keys(book_pages).length }; // emulates the query inside DOM
   console.log("TotalPages => " + slides.length);
 
   if (num > slides.length) {
@@ -269,9 +328,11 @@ function displaySlides(num) {
   console.log("currentIndex => " + currentIndex);
   console.log("Index => " + (currentIndex - 1));
 
-  // inputs_inner();
+  // NOTE set background image and initialize the slider
+  slide_to_page(book_pages[currentIndex - 1]);
+  // NOTE load inputs inside canvas
   insert_inputs([currentIndex - 1]);
-  slide_to_page(bookpages[currentIndex - 1]);
+  // NOTE set the positions of the inputs inside the canvas
   formsMaps([currentIndex - 1]);
 }
 window.setSlides = setSlides;

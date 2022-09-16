@@ -19,6 +19,13 @@ styles:
 
 # Issues in Development
 
+## CSS
+
+> input radio tunning
+
+[radio button](https://codepen.io/5t3ph/pen/VweBgeZ "Radio Button")
+[source](https://moderncss.dev/pure-css-custom-styled-radio-buttons/ "source")
+
 ## Javascript
 
 ### Modules

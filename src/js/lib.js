@@ -88,7 +88,7 @@ const book_pages = {
 // NOTE book_pages_maps
 const book_pages_maps = {
   1: "",
-  2: "#a2{position:absolute;top:53.2%;left:12.8%;width:67%;background-color:#fefaca;border:none;color:teal;} \
+  2: "#a2{position:absolute;top:53.2%;left:12.8%;width:67%;} \
       #b2{position:absolute;top:54.7%;left:18.5%;width:61.3%;background-color:#fefaca;border:none;color:teal;} \
       #cx{position:absolute;top:56.2%;left:18.6%;width:61.2%;background-color:#fefaca;border:none;color:teal;} \
       #d2{position:absolute;top:68.3%;left:12.8%;width:67%;background-color:#fefaca;border:none;color:teal;} \
@@ -125,7 +125,7 @@ const book_inputs = {
       id: "a2",
       autofocus: "on",
       placeholder: "Responder Actividad 3 Pregunta 1",
-      class: "someclassb222",
+      class: "saved",
       value: "Some Correct Previous Answer not editable",
       disabled: "disabled",
       style: "color:magenta!important;",
@@ -135,7 +135,7 @@ const book_inputs = {
       name: "b222",
       id: "b2",
       placeholder: "Responder Actividad 3  Pregunta 2",
-      class: "class",
+      class: "edition",
       value: "Previous Answer and editable",
     },
     {
@@ -143,6 +143,7 @@ const book_inputs = {
       name: "c222",
       id: "cx",
       placeholder: "Responder Actividad 3 Pregunta 3",
+      class: "blank",
     },
     {
       type: "text",
@@ -150,7 +151,7 @@ const book_inputs = {
       id: "d2",
       autofocus: "on",
       placeholder: "Responder Actividad 3 Pregunta 4",
-      class: "someclassb222",
+      class: "saved",
       value: "Some Correct Previous Answer not editable",
       disabled: "disabled",
       style: "color:magenta!important;",
@@ -160,7 +161,7 @@ const book_inputs = {
       name: "b222",
       id: "e2",
       placeholder: "Responder Actividad 3 Pregunta 5",
-      class: "class",
+      class: "edition",
       value: "Previous Answer and editable",
     },
     {
@@ -168,24 +169,28 @@ const book_inputs = {
       name: "c222",
       id: "f2",
       placeholder: "Responder Actividad 3 Pregunta 6",
+      class: "blank",
     },
     {
       type: "text",
       name: "c222",
       id: "g2",
       placeholder: "Responder Actividad 3 Pregunta 7",
+      class: "blank",
     },
     {
       type: "text",
       name: "c222",
       id: "h2",
       placeholder: "Responder Actividad 3 Pregunta 8",
+      class: "blank",
     },
     {
       type: "text",
       name: "c222",
       id: "i2",
       placeholder: "Responder Actividad 3 Pregunta 9",
+      class: "blank",
     },
   ],
   3: [

@@ -88,31 +88,31 @@ const book_pages = {
 // NOTE book_pages_maps
 const book_pages_maps = {
   1: "",
-  2: "#a2{position:absolute;top:53.2%;left:12.8%;width:67%;} \
-      #b2{position:absolute;top:54.7%;left:18.5%;width:61.3%;background-color:#fefaca;border:none;color:teal;} \
-      #cx{position:absolute;top:56.2%;left:18.6%;width:61.2%;background-color:#fefaca;border:none;color:teal;} \
-      #d2{position:absolute;top:68.3%;left:12.8%;width:67%;background-color:#fefaca;border:none;color:teal;} \
-      #e2{position:absolute;top:69.8%;left:18.5%;width:61.3%;background-color:#fefaca;border:none;color:teal;} \
-      #f2{position:absolute;top:71.2%;left:18.6%;width:61.2%;background-color:#fefaca;border:none;color:teal;} \
-      #g2{position:absolute;top:87.5%;left:12.8%;width:67%;background-color:#fefaca;border:none;color:teal;} \
-      #h2{position:absolute;top:89%;left:18.5%;width:61.3%;background-color:#fefaca;border:none;color:teal;} \
-      #i2{position:absolute;top:90.6%;left:18.6%;width:61.2%;background-color:#fefaca;border:none;color:teal;} \
+  2: "#a2{top:53.2%;left:12.8%;width:67%;} \
+      #b2{top:54.7%;left:18.5%;width:61.3%;} \
+      #cx{top:56.2%;left:18.6%;width:61.2%;} \
+      #d2{top:68.3%;left:12.8%;width:67%;} \
+      #e2{top:69.8%;left:18.5%;width:61.3%;} \
+      #f2{top:71.2%;left:18.6%;width:61.2%;} \
+      #g2{top:87.5%;left:12.8%;width:67%;} \
+      #h2{top:89%;left:18.5%;width:61.3%;} \
+      #i2{top:90.6%;left:18.6%;width:61.2%;} \
      ",
   3: " \
-			#a{position:absolute;top:36%;left:45.3%;width:3%;} \
-      #b{position:absolute;top:37.5%;left:45.3%;width:3%;} \
-      #c{position:absolute;top:38.9%;left:45.3%;width:3%;} \
-      #d{position:absolute;top:40.4%;left:45.3%;width:3%;} \
-			#a2{position:absolute;top:44.9%;left:45.3%;width:3%;} \
-      #b2{position:absolute;top:46.3%;left:45.3%;width:3%;} \
-      #c2{position:absolute;top:47.8%;left:45.3%;width:3%;} \
-      #d2{position:absolute;top:49.2%;left:45.3%;width:3%;} \
+      #a{top:36%;left:45.3%;width:3%;} \
+      #b{top:37.5%;left:45.3%;width:3%;} \
+      #c{top:38.9%;left:45.3%;width:3%;} \
+      #d{top:40.4%;left:45.3%;width:3%;} \
+      #a2{top:44.9%;left:45.3%;width:3%;} \
+      #b2{top:46.3%;left:45.3%;width:3%;} \
+      #c2{top:47.8%;left:45.3%;width:3%;} \
+      #d2{top:49.2%;left:45.3%;width:3%;} \
      ",
   4: "",
-  5: "#a{position:absolute;top:70.2%;left:190px;width:3%;}#b{position:absolute;bottom:17.5%;right:66.5%;width:3%;}#c{position:absolute;top:80.2%;left:43%;width:3%;}",
-  6: "#a{position:absolute;top:60.2%;left:190px;width:3%;}#b{position:absolute;bottom:17.5%;right:66.5%;width:3%;}#c{position:absolute;top:80.2%;left:43%;width:3%;}",
-  7: "#a{position:absolute;top:90.2%;left:190px;width:3%;}#b{position:absolute;bottom:17.5%;right:66.5%;width:3%;}#c{position:absolute;top:80.2%;left:43%;width:3%;}",
-  8: "#a{position:absolute;top:90.2%;left:190px;width:3%;}#b{position:absolute;bottom:17.5%;right:66.5%;width:3%;}#c{position:absolute;top:80.2%;left:43%;width:3%;}",
+  5: "#a{top:70.2%;left:190px;width:3%;}#b{bottom:17.5%;right:66.5%;width:3%;}#c{top:80.2%;left:43%;width:3%;}",
+  6: "#a{top:60.2%;left:190px;width:3%;}#b{bottom:17.5%;right:66.5%;width:3%;}#c{top:80.2%;left:43%;width:3%;}",
+  7: "#a{top:90.2%;left:190px;width:3%;}#b{bottom:17.5%;right:66.5%;width:3%;}#c{top:80.2%;left:43%;width:3%;}",
+  8: "#a{top:90.2%;left:190px;width:3%;}#b{bottom:17.5%;right:66.5%;width:3%;}#c{top:80.2%;left:43%;width:3%;}",
 };
 
 // NOTE book_inputs

@@ -36,6 +36,7 @@
 
 input {
   background-color: transparent !important;
+  position: absolute;
   border: none !important;
   color: teal !important;
 }

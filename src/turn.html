@@ -18,6 +18,8 @@
     />
     <!--NOTE this must load with js -->
 
+    <script defer src="./js/base.js" charset="utf-8" type="module"></script>
+
     <link rel="stylesheet" href="./css/uix.css" type="text/css" media="all" />
     <style type="text/css" media="screen">
       body {
@@ -27,40 +29,51 @@
     </style>
   </head>
   <body>
-    <div id="layer1"></div>
+    <div class="xscene">
+      <div class="xcard">
+        <div class="xcard__face xcard__face--front">
+          <div id="layer1"></div>
+          <div id="layer2" class="transparentLayer">
+            <div id="container">
+              <div class="controls">
+                <form id="book_canvas" class="binputs" autocomplete="off">
+                  <span>&nbsp;</span>
+                </form>
 
-    <div id="layer2" class="transparentLayer">
-      <div id="container">
-        <div class="controls">
-          <form id="book_canvas" class="binputs" autocomplete="off">
-            <span>&nbsp;</span>
-          </form>
+                <a
+                  class="slider-btn previous"
+                  accesskey="h"
+                  aria-keyshortcuts="h"
+                  onclick="setSlides(-1)"
+                  >❮</a
+                >
+                <a
+                  class="slider-btn next"
+                  accesskey="l"
+                  aria-keyshortcuts="l"
+                  onclick="setSlides(1)"
+                  >❯</a
+                >
 
-          <a
-            class="slider-btn previous"
-            accesskey="h"
-            aria-keyshortcuts="h"
-            onclick="setSlides(-1)"
-            >❮</a
-          >
-          <a
-            class="slider-btn next"
-            accesskey="l"
-            aria-keyshortcuts="l"
-            onclick="setSlides(1)"
-            >❯</a
-          >
+                <canvas id="myCanvas" width="1275" height="1650"
+                  >Your browser does not support the HTML5 canvas tag.</canvas
+                >
+                <!--end of controls -->
+              </div>
+              <!--end of container-->
+            </div>
+            <!-- End of the layer2 -->
+          </div>
+          <!-- End of layer one -->
 
-          <canvas id="myCanvas" width="1275" height="1650"
-            >Your browser does not support the HTML5 canvas tag.</canvas
-          >
+          <!--page-one-->
         </div>
+        <!-- page two-->
+        <!-- <div class="card__face card__face--back">back</div> -->
       </div>
-      <!-- End of the layer2 -->
+      <!--Book ending-->
     </div>
-
-    <script src="./js/base.js" charset="utf-8" type="module"></script>
-    <script src="./js/utils.js" charset="utf-8" type="text/javascript"></script>
+    <!-- scene -->
     <script nomodule>
       console.info(`Your browser doesn't support native JavaScript modules.`);
     </script>

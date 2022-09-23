@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=100%, initial-scale=1.0" />
+    <title>Document</title>
+    <style type="text/css" media="screen">
+      /**Book animation testing **/
+
+      * {
+        background-color: black;
+        color: #acacac;
+      }
+
+      .booking {
+        position: relative;
+        width: 150px;
+        border: solid 3px darkcyan;
+        animation-name: diagonal-slide;
+        animation-duration: 5s;
+        animation-iteration-count: 10;
+      }
+
+      @keyframes diagonal-slide {
+        from {
+          left: 0;
+          top: 0;
+        }
+
+        to {
+          left: 400px;
+          top: 500px;
+        }
+      }
+
+      .animated {
+        animation: hello-goodbye 3.5s infinite;
+        width: fit-content;
+      }
+      @keyframes hello-goodbye {
+        0% {
+          transform: rotateZ(-90deg);
+          opacity: 0.5;
+        }
+        50% {
+          transform: none;
+          opacity: 1;
+        }
+        100% {
+          transform: rotateZ(90deg) scale(0.5);
+          opacity: 0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h2 onclick="this.classList.toggle('animated')">
+      click me to start / stop
+    </h2>
+
+    <div class="booking">testing</div>
+
+    <button id="growing">Click me</button>
+
+    <style>
+      #growing {
+        transition: font-size 3s, color 2s;
+      }
+    </style>
+
+    <script>
+      growing.onclick = function () {
+        this.style.fontSize = "36px";
+        this.style.color = "red";
+      };
+    </script>
+  </body>
+</html>

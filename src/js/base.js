@@ -26,5 +26,5 @@ const bookinit = {
 };
 
 //initializing the first page
-slideModule.slide_to_page(bookinit[1]);
+slideMonule.slide_to_page(bookinit[1]);
 //

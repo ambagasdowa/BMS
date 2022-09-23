@@ -16,7 +16,7 @@ body {
 #layer1 {
   z-index: 1;
   /*Remove for production*/
-  /*  opacity: 0.3;*/
+  opacity: 0.3;
 }
 
 #layer2 {

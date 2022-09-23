@@ -5,6 +5,16 @@ function greet(name) {
 }
 export { greet, message };
 
+function lpobj(obj_looper) {
+  // console.log(`PropertyNames => ${Object.getOwnPropertyNames(obj_looper)}`);
+  console.log(`PropertyKeys => ${Object.keys(obj_looper)}`);
+  console.log(`PropertyValues => ${Object.values(obj_looper)}`);
+
+  //  for (const prop in obj_looper) {
+  //    console.log(`${prop} : ${obj_looper[prop]}`);
+  //  }
+}
+
 function slide_to_page(page) {
   let cssRules =
     "#layer1{background: url(" + page + ") no-repeat;background-size:91%;}";
@@ -14,6 +24,11 @@ function slide_to_page(page) {
   styleElement.appendChild(document.createTextNode(cssRules));
   /* attach the style element to the document head */
   document.getElementsByTagName("head")[0].appendChild(styleElement);
+  //  document.querySelector("#layer1").classList.add("fadeIn");
+
+  //  let books = document.querySelector(".card");
+  //  books.classList.add("is-flipped");
+  //  console.log(document.querySelector(".books"));
 }
 
 export { slide_to_page };
@@ -32,24 +47,24 @@ function formsMaps(css_idx) {
 function insert_inputs(idx_input) {
   // TODO : Working whit this
   const in_puts = document.querySelector(".controls form");
+  // console.log(`query tag before reset .controls>form => ${lpobj(in_puts)}`);
+  console.log(in_puts);
   in_puts.innerHTML = "";
-  let new_binputs = document.getElementById("book_canvas");
-  console.log(new_binputs);
-  console.log(`inputsLength => ${Object.keys(book_inputs[idx_input]).length}`);
+  let new_binputs = document.getElementById("book_canvas"); // Form
+  //  console.log(`new_binputs : Form tag =>  ${new_binputs}`);
+  //  console.log(`inputsLength => ${Object.keys(book_inputs[idx_input]).length}`);
 
   const inputs = book_inputs[idx_input];
   for (const input of inputs) {
-    console.log(input);
-    console.log(inputs);
     let inputx = document.createElement("input");
     for (const key in input) {
       if (Object.hasOwnProperty.call(input, key)) {
-        console.log(key);
-        console.log(input[key]);
         inputx[key] = input[key];
       }
     }
     new_binputs.appendChild(inputx);
+    //paper3.classList.add("flipped");
+    //book.style.transform = "translateX(100%)";
   }
 }
 
@@ -342,3 +357,16 @@ function displaySlides(num) {
 }
 window.setSlides = setSlides;
 export { displaySlides, currentIndex };
+
+// NOTE pure js
+// based on using name tags (as with radio buttons) and a few lines of javascript.
+// <input type="checkbox" name="check" onclick="onlyOne(this)">
+// <input type="checkbox" name="check" onclick="onlyOne(this,tagname)">
+
+function onlyOne(checkbox, tag) {
+  let checkboxes = document.getElementsByName(tag);
+  checkboxes.forEach((item) => {
+    if (item !== checkbox) item.checked = false;
+  });
+}
+window.onlyOne = onlyOne;

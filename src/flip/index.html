@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>FlipBook</title>
+
+    <script defer src="./js/flip.js" charset="utf-8"></script>
+
+    <style type="text/css" media="screen">
+      body {
+        background: #111;
+        color: teal;
+      }
+
+      .scene {
+        /* the scene or stage */
+        width: 200px;
+        height: 260px;
+        perspective: 600px;
+      }
+      .card {
+        /*NOTE this is the  Object and below is the 3D effect defined */
+        width: 100%;
+        height: 100%;
+        position: relative;
+        transition: transform 1s;
+        transform-style: preserve-3d; /* preserve or expand the 3d to childs */
+      }
+
+      /*** Faces engine
+      An element’s perspective only applies to direct descendant children, in this case .card. 
+      In order for subsequent children to inherit a parent’s perspective, and live in the same 3D space,
+      the parent can pass along its perspective with transform-style: preserve-3d.
+      Without 3D transform-style, the faces of the card would be flattened with its parents,
+      and the back face’s rotation would be nullified.
+      To position the faces in 3D space, we’ll need to reset their positions in 2D with 
+      position: absolute. In order to hide the back-side of the faces when they are faced away from 
+      the viewer, we use backface-visibility: hidden.
+      ***/
+      .card__face {
+        /*** This made the backface of cards invisible when are turn***/
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        backface-visibility: hidden;
+      }
+      /***
+  To flip .card__face--back, we add a basic 3D transform of rotateY(180deg).
+***/
+      .card__face--front {
+        background-color: #005500;
+      }
+
+      .card__face--back {
+        background-color: blue;
+        transform: rotateY(180deg);
+      }
+
+      /***
+        With the faces in place, the .card requires a corresponding style for when it is flipped.
+       ***/
+
+      .card.is-flipped {
+        transform: rotateY(180deg);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="scene">
+      <div class="card">
+        <div class="card__face card__face--front">front</div>
+        <div class="card__face card__face--back">back</div>
+      </div>
+    </div>
+
+    <a href="#" class="next">NEXT</a>
+  </body>
+</html>

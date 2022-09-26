@@ -25,10 +25,6 @@ function slide_to_page(page) {
   /* attach the style element to the document head */
   document.getElementsByTagName("head")[0].appendChild(styleElement);
   //  document.querySelector("#layer1").classList.add("fadeIn");
-
-  //  let books = document.querySelector(".card");
-  //  books.classList.add("is-flipped");
-  //  console.log(document.querySelector(".books"));
 }
 
 export { slide_to_page };
@@ -347,6 +343,11 @@ function displaySlides(num) {
   }
   console.log("currentIndex => " + currentIndex);
   console.log("Index => " + (currentIndex - 1));
+
+  // NOTE 3d Effect
+  let books = document.querySelector(".card");
+  books.classList.add("is-flipped");
+  console.log(document.querySelector(".books"));
 
   // NOTE set background image and initialize the slider
   slide_to_page(book_pages[currentIndex - 1]);

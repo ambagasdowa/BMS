@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title></title>
+    <!--NOTE this must load with js -->
+    <link
+      rel="stylesheet"
+      href="./css/layouts.css"
+      type="text/css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      href="./css/layers.css"
+      type="text/css"
+      media="all"
+    />
+    <!--NOTE this must load with js -->
+
+    <script defer src="./js/base.js" charset="utf-8" type="module"></script>
+
+    <link rel="stylesheet" href="./css/uix.css" type="text/css" media="all" />
+    <style type="text/css" media="screen">
+      body {
+        background-color: #444;
+      }
+      /** NOTE TESTING **/
+    </style>
+  </head>
+
+  <body>
+    <div class="book">
+      <!-- [pages] emulates magazine -->
+      <div class="pages">
+        <div id="layer1"></div>
+        <div id="layer2" class="transparentLayer">
+          <div id="container">
+            <div class="controls">
+              <form id="book_canvas" class="binputs" autocomplete="off">
+                <span>&nbsp;</span>
+              </form>
+
+              <canvas id="myCanvas" width="1275" height="1650"
+                >Your browser does not support the HTML5 canvas tag.</canvas
+              >
+              <!--end of controls -->
+            </div>
+            <!--end of container-->
+          </div>
+          <!-- End of the layer2 -->
+        </div>
+        <!-- pages -->
+      </div>
+
+      <div>
+        <a
+          class="slider-btn previous"
+          accesskey="h"
+          aria-keyshortcuts="h"
+          onclick="setSlides(-1)"
+          >❮</a
+        >
+        <a
+          class="slider-btn next"
+          accesskey="l"
+          aria-keyshortcuts="l"
+          onclick="setSlides(1)"
+          >❯</a
+        >
+        <!-- div links pager -->
+      </div>
+      <!-- book -->
+    </div>
+
+    <script nomodule>
+      console.info(`Your browser doesn't support native JavaScript modules.`);
+    </script>
+  </body>
+</html>

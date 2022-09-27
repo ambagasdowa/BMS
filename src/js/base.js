@@ -6,6 +6,7 @@ const linkElement = document.createElement("link");
 linkElement.setAttribute("rel", "stylesheet");
 linkElement.setAttribute("href", "./css/layouts.css");
 /* attach to the document head */
+console.log(`loading stylesheet layuot ,layers ...`);
 document.getElementsByTagName("head")[0].appendChild(linkElement);
 
 const layers = document.createElement("link");
@@ -26,5 +27,5 @@ const bookinit = {
 };
 
 //initializing the first page
-slideMonule.slide_to_page(bookinit[1]);
+slideModule.slide_to_page(bookinit[1], "legacy");
 //

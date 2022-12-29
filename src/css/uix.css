@@ -1,37 +1,3 @@
-/*Style for ">" next and "<" previous buttons */
-.slider-btn {
-  cursor: pointer;
-  position: absolute;
-  top: 50%;
-  width: auto;
-  padding: 8px 16px;
-  margin-top: -22px;
-  color: rgb(0, 0, 0);
-  font-weight: bold;
-  font-size: 18px;
-  transition: 0.6s ease;
-  border-radius: 0 3px 3px 0;
-  user-select: none;
-  background-color: rgba(255, 255, 255, 0.5);
-  border-radius: 50%;
-}
-
-/* setting the position of the previous button towards left */
-.previous {
-  left: 2%;
-}
-/* setting the position of the next button towards right */
-.next {
-  right: 2%;
-}
-
-/* On hover, adding a background color */
-.previous:hover,
-.next:hover {
-  color: rgb(255, 253, 253);
-  background-color: rgba(0, 0, 0, 0.8);
-}
-
 /** Inputs Codes **/
 
 input {
@@ -39,6 +5,7 @@ input {
   position: absolute;
   border: none !important;
   color: teal !important;
+  /* font-size: 10px; */
 }
 input [type="radio"] {
   background-color: #3b4252;
@@ -50,62 +17,4 @@ input > .saved {
 
 input > .edition {
   color: teal !important;
-}
-
-/**Book animation testing **/
-.scene {
-  /* the scene or stage */
-  width: 1060px;
-  height: 1300px;
-  perspective: 600px;
-}
-.card {
-  /*NOTE this is the  Object and below is the 3D effect defined */
-  width: 100%;
-  height: 100%;
-  position: relative;
-  transition: transform 4s;
-  transform-style: preserve-3d; /* preserve or expand the 3d to childs */
-  transform: center right;
-}
-
-/*** Faces engine
-      An element’s perspective only applies to direct descendant children, in this case .card. 
-      In order for subsequent children to inherit a parent’s perspective, and live in the same 3D space,
-      the parent can pass along its perspective with transform-style: preserve-3d.
-      Without 3D transform-style, the faces of the card would be flattened with its parents,
-      and the back face’s rotation would be nullified.
-      To position the faces in 3D space, we’ll need to reset their positions in 2D with 
-      position: absolute. In order to hide the back-side of the faces when they are faced away from 
-      the viewer, we use backface-visibility: hidden.
-      ***/
-
-/*** This made the backface of cards invisible when are turn***/
-/*
-.card__face {
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  backface-visibility: hidden;
-}
-*/
-/***
-  To flip .card__face--back, we add a basic 3D transform of rotateY(180deg).
-***/
-/*
-.card__face--front {
-  background-color: transparent;
-}
-
-.card__face--back {
-  background-color: transparent;
-  transform: rotateY(180deg);
-}
-*/
-/***
-        With the faces in place, the .card requires a corresponding style for when it is flipped.
-       ***/
-
-.card.is-flipped {
-  transform: rotateY(-90deg);
 }
